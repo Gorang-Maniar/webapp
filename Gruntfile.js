@@ -63,12 +63,20 @@ module.exports = function (grunt) {
       }
     },
 
+    nginx: {
+      options: {
+          config: 'nginx.conf',
+          prefix: '/mnt/webapp',
+          useSudo: 'true'
+      }
+    },
+
     // The actual grunt server settings
     connect: {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       livereload: {
@@ -358,6 +366,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-nginx');
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
@@ -366,6 +375,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
+      'nginx:restart',
       'wiredep',
       'concurrent:server',
       'autoprefixer',
@@ -405,7 +415,7 @@ module.exports = function (grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'newer:jshint',
+    'newer:jshint','nginx:start',
     'test',
     'build'
   ]);
