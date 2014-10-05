@@ -1,11 +1,14 @@
 (function () {
 
-'use strict';
+    'use strict';
 
+    require('angular');
+    require('angular-route');
+    require('angular-animate');
 
-  angular.module('SampleApp', ['ngRoute', 'ngAnimate'])
+    angular.module('HiremonkApp', ['ngRoute', 'ngAnimate'])
 
-  .config([
+    .config([
     '$locationProvider',
     '$routeProvider',
     function($locationProvider, $routeProvider) {
@@ -20,16 +23,16 @@
            redirectTo: '/'
         });
     }
-  ]);
+    ]);
 
-  //Load controller
-  angular.module('SampleApp')
+    //Load controller
+    angular.module('HiremonkApp')
 
-  .controller('MainController', [
+    .controller('MainController', [
     '$scope',
     function($scope) {
-      $scope.test = "Testing...";
+      $scope.testing = "Testing...";
     }
-  ]);
+    ]);
 
 }());
