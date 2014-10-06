@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+  
+
+    <title>HireMonk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/social_buttons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet">
+
+      <!--<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">-->
+
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>-->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
+    <!-- Custom styles for this template -->
+  
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+   
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   <style type="text/css">
+
+      form { padding: 2px; }
+      
+      .error{ font-size: 13px; color: red;}    
+      #wrap{
+          position: relative;
+          top: -20px;
+          width: 80%;
+          box-shadow: 1px 1px 10px 5px #888888;  
+        }
+        #set_pos{
+        position: relative;
+        left: -20px;
+      }
+      #lefb{
+        position: relative;
+        top: 120px;
+        left: 800px;
+        width: 1%;
+        height: 300px;
+        border-right: 1px groove black;
+      }
+     #login{
+   
+    width: 20%;
+    position: relative;
+    left: 800px;
+    top: -120px;
+     }
+     #main{
+      position: relative;
+      top: 30px;
+     }
+     #linkedin_button{
+      position: relative;
+      left: 480px;
+     }
+      .navbar .navbar-inner {
+        padding: 0;
+      }
+      .navbar .nav {
+        margin: 0;
+        display: table;
+        width: 100%;
+        position: relative;
+        left: -15px;
+      }
+      .navbar .nav li {
+        display: table-cell;
+        width: 1%;
+        float: none;
+      }
+      .navbar .nav li a {
+        font-weight: bold;
+        text-align: center;
+        border-left: 1px solid rgba(255,255,255,.75);
+        border-right: 1px solid rgba(0,0,0,.1);
+      }
+      .navbar .nav li:first-child a {
+        border-left: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .navbar .nav li:last-child a {
+        border-right: 0;
+        border-radius: 0 3px 3px 0;
+      }
+   </style>
+  </head>
+  <body background="http://s3.gomedia.us/wp-content/uploads/2011/09/Fudgegraphics-Wallpaper-Case-Study-13.jpg" >
+<!--signin modal-->
+<div id="main">
+<!--<div id="lefb"></div>-->
+
+
+<div class="container" id="wrap" >
+<div id="login">
+<label><p>Already have an account?  </p><a href="#">Log in</a></label>
+
+<!--<font size="6" style="background:#a1a1a1; border:1px groove #a1a1a1;  border-radius: 5px; ">OR</font>-->
+</div>
+
+  <div id="set_pos" > 
+    <div class="row" >
+      <div class="container" >
+      <div class="masthead">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li class="active" style="width:250px;"><a href="signup_candidate.html">Student</a></li>
+                <li><a href="signup_employer.html" style="width:250px;">Employee</a></li>
+                
+              </ul>
+            </div>
+         </div>
+        </div>
+     </div> 
+    <legend style="position:relative; width:540px; left:300px;">Employee signup</legend>
+      <button class="btn btn-linkedin btn-mg " id="linkedin_button" ><i class="fa fa-linkedin" ></i> | Sign up with LinkedIn</button><br><br>
+     <p id="linkedin_button">Or sign up with email below</p><br>
+        <div class="col-md-6 col-md-offset-3">
+            <form method="post" accept-charset="utf-8" class="form" role="form" id="defaultForm">  
+                    <div class="row">
+                        <div class=" col-xs-6 col-md-6  ">
+                          <label>Company <i style="color:red;">*</i>  </label>
+                            <input type="text" name="company" value="" class="form-control input-mg" placeholder="Company"
+                              data-msg-required="The company field is required." 
+                                  data-rule-required="true" 
+                            />
+                        </div>
+                        <div class="col-xs-6 col-md-6  ">
+                            <label>User Name <i style="color:red;">*</i> </label>
+                            <input type="text" name="username" value="" class="form-control input-mg" placeholder="username"
+                              data-msg-required="The User Name field is required." 
+                                  data-rule-required="true" 
+                            >
+                        </div>
+                    </div></br>
+	<!--	<div class="row">
+                        <div class=" col-xs-6 col-md-6  ">
+                          <label>Name <i style="color:red;">*</i>  </label>
+                            <input type="text" name="Name" value="" class="form-control input-mg" placeholder="Name"
+                              data-msg-required="The name field is required." 
+                                  data-rule-required="true" 
+                            />
+                        </div>
+                        <div class="col-xs-6 col-md-6  ">
+                            <label>Phone <i style="color:red;">*</i> </label>
+                            <input type="phone" name="phone" value="" class="form-control input-mg" placeholder="+1-123-456-789"
+                              data-msg-required="The phone field is required." 
+                                  data-rule-required="true" 
+                            >
+                        </div>
+                    </div></br>
+       -->             <div class="row">
+                      <div class="col-xs-6 col-md-6">
+                        <label>Email <i style="color:red;">*</i> </label>
+                        <input type="text" name="email" value="" class="form-control input-mg" placeholder="Your Email"    
+                        data-msg-required="The email field is required." 
+                                  data-rule-required="true" 
+                        /></br>
+                      </div>
+                      <div class="col-xs-6 col-md-6" > <!--style="position:relative; top:20px; left:-60px; "> style="width:245px;  " style="position:relative; top:-19px; left:60p"-->
+                        <label > Password <i style="color:red;">*</i> </label>
+                        <input type="password" name="password" value="" class="form-control input-mg" placeholder="Password" 
+                         data-msg-minlength="The password must be with a minimum length of 5." 
+                         data-rule-minlength="5" 
+                         data-msg-required="The password field is required." 
+                         data-rule-required="true" 
+                         style="width:255px; position:relative; top:2px; left:-1px" 
+                          />
+                      </div>
+                    </div> 
+                    
+                    <span><p><i style="color:red;">* </i>Required fields </p><p style="position:relative; left:335px; top:-30px;">Already have an account? <a href="login.html">Login </a></span></p>
+                     <div class="checkbox">
+                     
+                      <p> By registration we consider you agree for <a href="#">Terms and conditions </a></p>
+                     
+                    </div>
+                          <button class="btn btn-mg btn-primary signup-btn " type="submit" style="position:relative; left:170px; width:200px;" id="validateBtn">
+                        START HIRING</button><br> <br>
+                       
+                       
+<br><br>
+            </form>          
+          </div>
+</div>            
+</div>
+</div>
+</div>
+</div>
+  <!-- script references -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js" type="text/javascript"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery.validate/1.11.1/jquery.validate.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var $form = $("form");
+    $form.validate();
+    $form.submit(function (event) {
+ 
+      if ($form.validate().valid()) {
+
+          event.preventDefault();
+
+          alert("Valid!");
+      }
+    });
+  </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+    
+  </body>
+ 
+</html>

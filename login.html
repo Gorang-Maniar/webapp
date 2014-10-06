@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>HireMonk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/social_buttons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   <style type="text/css">
+   #loginModal{
+    border: 1px solid #a1a1a1;
+    padding: 0px 30px ; 
+    top:80px;
+    left: 440px;
+    width: 500px;
+    border-radius: 15px;
+    height: 75%;
+  }
+  #in{
+    position: relative;
+    left: -60px;
+  }
+  #sin_btn{
+    position: relative;
+    left: 50px;
+    top: -15px;
+  }
+    
+    #help{
+      position: relative;
+      top: -22px;
+      left: -190px;
+    }
+    #remember_me{
+      position: relative;
+      top: -29px;
+      left:15px;
+      
+    }
+  #linkedin_button{
+    position: relative;
+    top: 10px;
+    left: 100px;
+  }
+  hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+  #sin{
+    position: relative;
+    top: -20px;
+    left: 30px;
+    width: 350px;
+  }
+  #lin{
+    position: relative;
+    top: -10px;
+
+    width: 250px;
+  }
+  #icon{
+    position: relative;
+    left: 420px;
+    top: -43px;
+  }
+  #icon-l{
+    position: relative;
+    left: 430px;
+    top: -50px;
+  }
+  #si{
+    
+  }
+   </style>
+  </head>
+<body background="https://dmrxx81gnj0ct.cloudfront.net/assets/backgrounds/home-3ce6b6930ad7740b3d62a50c89149f5d.jpg">
+<!--login modal-->
+ <div id="loginModal" class="modal show" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+ <!-- <div class="modal-content">-->
+  <!--    <div class="modal-header">
+          <h1 class="text-center">Login</h1>
+      </div>-->
+      <div class="modal-body">
+     
+          <form  class="form-horizontal" class="form-signup" role="form">
+         
+           <!-- <p>
+              <a href="#" type="button" class="btn btn-info btn-lg" id="sin">Sign up</a>
+
+            </p>-->
+            
+            <div class="form-group has-feedback has-feedback-left ">
+            <div class="col-sm-12" id="in">
+               <input type="email" class="form-control input-lg" placeholder="Username" >
+                <i id="icon" class="form-control-feedback glyphicon glyphicon-user"></i>
+            </div>
+            <div class="col-sm-12" id="in">
+               <input type="password" class="form-control input-lg" placeholder="Password" >
+               <i class="fa fa-key fa-fw" id="icon-l"></i>
+                <!--<i id="icon-l" class="form-control-feedback glyphicon glyphicon-lock"></i>-->
+            </div>
+            <div class="clearfix msB">
+              <label class="remember pull-left psT" id="remember_me"><input type="checkbox" > <small>Remember me</small></label>
+              <a class="cursor pull-right password-retrieve small bold msT" id="help">Forgot your password?</a>
+            </div>
+            <div class="col-sm-12" >
+              <a class="btn btn-primary btn-lg " type="submit" id="sin_btn" >Log in</a>
+            </div>
+          
+             
+              <p align="center" style="position:relative; left:-90px; top:3px;">OR </p>
+              <button class="btn btn-linkedin btn-lg " id="linkedin_button" ><i class="fa fa-linkedin"></i> | Connect with LinkedIn</button>
+              
+
+          </form>
+      </div>
+  </div>
+</div>
+  <!-- script references -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+ 
+</html>

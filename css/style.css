@@ -1,0 +1,12 @@
+form input[type="input"]{
+	width: 200px;
+}
+.modal-footer {   border-top: 0px; }
+.bor{
+	height: 900px;
+}
+
+#reg{
+	position: relative;
+	padding-left: -100px;
+}

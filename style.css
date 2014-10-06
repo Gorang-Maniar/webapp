@@ -1,0 +1,16 @@
+form input[type="email"]{
+	width: 20px;
+
+}
+.form-control{
+	width: 20px;
+}
+
+#main{
+
+}
+
+#reg{
+	position: relative;
+	padding-left: 200px;
+}
