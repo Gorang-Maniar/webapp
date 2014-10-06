@@ -33,7 +33,7 @@ gulp.task('lint', function() {
 });
 
 gulp.task('browserify', function() {
-  gulp.src(['app/scripts/main.js'])
+  gulp.src(['app/scripts/app.js'])
   .pipe(browserify({
     insertGlobals: true,
     debug: true
@@ -72,14 +72,19 @@ gulp.task('copy-bower-components', function () {
 });
 
 gulp.task('copy-html-files', function () {
-  gulp.src('./app/**/*.html')
-    .pipe(gulp.dest('dist/'))
+  gulp.src('./app/index.html')
+    .pipe(gulp.dest('./dist/'))
     .pipe(connect.reload());
+
+   gulp.src('./app/views/**/*.html')
+    .pipe(gulp.dest('./dist/views/'))
+    .pipe(connect.reload());
+
 });
 
 gulp.task('copy-image-files', function () {
   gulp.src('./app/images/**')
-    .pipe(gulp.dest('dist/'))
+    .pipe(gulp.dest('./dist/'))
     .pipe(connect.reload());
 });
 
@@ -90,7 +95,11 @@ gulp.task('watch', ['lint'], function() {
         'browserify'
     ]);
 
-    gulp.watch(['app/index.html', 'app/views/**/*.html'], [
+    gulp.watch(['./app/index.html'], [
+        'copy-html-files'
+    ]);
+
+    gulp.watch(['./app/views/**/*.html'], [
         'copy-html-files'
     ]);
 
